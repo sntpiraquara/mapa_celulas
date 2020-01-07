@@ -21,6 +21,8 @@ defmodule MapaCelulas.Repo.Migrations.CreateCellsTable do
       add :address_state, :string
       add :address_country, :string
       add :address_city, :string
+
+      timestamps()
     end
   end
 

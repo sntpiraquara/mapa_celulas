@@ -2,10 +2,7 @@ use Mix.Config
 
 # Configure your database
 config :mapa_celulas, MapaCelulas.Repo,
-  username: "postgres",
-  password: "password",
-  database: "mapa_celulas_dev",
-  hostname: "127.0.0.1",
+  url: "postgres://postgres:password@127.0.0.1:5432/mapa_celulas_dev",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
@@ -26,7 +23,7 @@ config :mapa_celulas, MapaCelulasWeb.Endpoint,
       "--mode",
       "development",
       "--watch-stdin",
-      cd: Path.expand("../assets", __DIR__)
+      # cd: Path.expand("../assets", __DIR__)
     ]
   ]
 

@@ -7,6 +7,7 @@
     
     <title>MapaCelulas</title>
     
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
   <body>
@@ -21,7 +22,7 @@
           <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
         </a>
       </section>
-    </header> -->
+    </header> 
     
     <main role="main">
       <div class="container">
@@ -29,17 +30,10 @@
         <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
       </div>
       
-      <%= render @view_module, @view_template, assigns %>
-    </main>
+    </main>-->
 
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Mapa de Células</strong> by <a href="https://github.com/sntpiraquara">SNT Piraquara</a>. O código fonte possui a licenca
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
-        </p>
-      </div>
-    </footer>
+    <%= render @view_module, @view_template, assigns %>
+
 
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </body>
